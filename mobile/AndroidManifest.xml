@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cradle.iitc_mobile"
+    package="com.cradle.iitc_mobile_debug_by_kzooz"
     android:installLocation="auto"
     android:versionCode="104"
     android:versionName="0.26.0">
@@ -20,13 +20,13 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
-        android:name="com.cradle.iitc_mobile.IITC_Application"
+        android:name="com.cradle.iitc_mobile_debug_by_kzooz.IITC_Application"
         android:allowBackup="true"
         android:icon="@drawable/ic_iitcm"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.cradle.iitc_mobile.IITC_Mobile"
+            android:name="com.cradle.iitc_mobile_debug_by_kzooz.IITC_Mobile"
             android:configChanges="orientation|keyboard|keyboardHidden|screenSize|uiMode"
             android:label="@string/app_name"
             android:launchMode="singleTask">
@@ -103,12 +103,12 @@
         </activity>
 
         <activity
-            android:name="com.cradle.iitc_mobile.prefs.PreferenceActivity"
+            android:name="com.cradle.iitc_mobile_debug_by_kzooz.prefs.PreferenceActivity"
             android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
             android:label="@string/activity_settings"/>
 
         <activity
-            android:name="com.cradle.iitc_mobile.prefs.PluginPreferenceActivity"
+            android:name="com.cradle.iitc_mobile_debug_by_kzooz.prefs.PluginPreferenceActivity"
             android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
             android:label="@string/activity_plugins">
             <!-- Handles external user plugins -->
@@ -149,17 +149,17 @@
         </activity>
 
         <activity
-            android:name="com.cradle.iitc_mobile.share.ShareActivity"
+            android:name="com.cradle.iitc_mobile_debug_by_kzooz.share.ShareActivity"
             android:label="@string/activity_share"
             android:noHistory="true"
-            android:parentActivityName="com.cradle.iitc_mobile.IITC_Mobile">
+            android:parentActivityName="com.cradle.iitc_mobile_debug_by_kzooz.IITC_Mobile">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.cradle.iitc_mobile.IITC_Mobile"/>
+                android:value="com.cradle.iitc_mobile_debug_by_kzooz.IITC_Mobile"/>
         </activity>
 
         <activity
-            android:name="com.cradle.iitc_mobile.share.SendToClipboard"
+            android:name="com.cradle.iitc_mobile_debug_by_kzooz.share.SendToClipboard"
             android:enabled="true"
             android:excludeFromRecents="true"
             android:exported="false"
@@ -174,7 +174,7 @@
         </activity>
 
         <activity
-            android:name="com.cradle.iitc_mobile.share.SaveToFile"
+            android:name="com.cradle.iitc_mobile_debug_by_kzooz.share.SaveToFile"
             android:enabled="true"
             android:excludeFromRecents="true"
             android:exported="false"
@@ -208,7 +208,7 @@
         <!-- Points to searchable activity so the whole app can invoke search. -->
         <meta-data
             android:name="android.app.default_searchable"
-            android:value="com.cradle.iitc_mobile.IITC_Mobile"/>
+            android:value="com.cradle.iitc_mobile_debug_by_kzooz.IITC_Mobile"/>
     </application>
 
 </manifest>
