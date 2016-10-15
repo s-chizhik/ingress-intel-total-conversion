@@ -51,9 +51,9 @@ settings = buildSettings[buildName]
 # set up vars used for replacements
 
 utcTime = time.gmtime()
-buildDate = time.strftime('%Y-%m-%d-%H%M%S',utcTime)
+buildDate = time.strftime('%Y-%m-%d-%H%M%S',utcTime).decode('utf-8')
 # userscripts have specific specifications for version numbers - the above date format doesn't match
-dateTimeVersion = time.strftime('%Y%m%d.',utcTime) + time.strftime('%H%M%S',utcTime).lstrip('0')
+dateTimeVersion = time.strftime('%Y%m%d.',utcTime).decode('utf-8') + time.strftime('%H%M%S',utcTime).lstrip('0').decode('utf-8')
 
 # extract required values from the settings entry
 resourceUrlBase = settings.get('resourceUrlBase')
@@ -236,7 +236,7 @@ main = doReplacements(main,downloadUrl=downloadUrl,updateUrl=updateUrl)
 saveScriptAndMeta(main, outDir, 'total-conversion-build.user.js', oldDir)
 
 with io.open(os.path.join(outDir, '.build-timestamp'), 'w') as f:
-    f.write(time.strftime('%Y-%m-%d %H:%M:%S UTC', utcTime))
+    f.write(time.strftime('%Y-%m-%d %H:%M:%S UTC', utcTime).decode('utf-8'))
 
 
 # for each plugin, load, parse, and save output
